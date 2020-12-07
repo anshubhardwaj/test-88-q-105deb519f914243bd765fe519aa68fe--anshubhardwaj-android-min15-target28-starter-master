@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lineavAstroClick"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/ColorWhite"
+        app:theme="@style/ToolBarStyle"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ColorWhite">
+
+            <RelativeLayout
+                android:id="@+id/relCountryImage"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#e5e5e5"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/tvPhoneCode"
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/abc_vector_test"
+                    android:contentDescription="@null"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvPhoneCode_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvPhoneCode"
+                    android:background="@drawable/newbackground"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textCursorDrawable="@color/colorPrimaryDark"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvPhoneCode_number"
+                    android:layout_alignBottom="@+id/tvPhoneCode_number"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvPhoneCode_number"
+                    android:layout_toRightOf="@+id/tvPhoneCode_number"
+                    android:contentDescription="@null"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="5dp" />
+
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/evSearchAstro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toEndOf="@+id/relCountryImage"
+                android:layout_toLeftOf="@+id/imgvSearch"
+                android:layout_toRightOf="@+id/relCountryImage"
+                android:cursorVisible="true"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center|start"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:hint="Search"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="14sp"
+
+                />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" />
+
+</LinearLayout>
